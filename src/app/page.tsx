@@ -1,103 +1,107 @@
-import Image from "next/image";
+﻿'use client'
 
-export default function Home() {
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { BookOpen, Users, Calendar } from 'lucide-react'
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+      <Header />
+      
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+            Welcome to <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Papercuts</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Our cozy book club where stories come alive and friendships are bound by pages. 
+            Meeting monthly since 2023.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900">18 Members</h3>
+              <p className="text-gray-600">Active readers</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900">2+ Years</h3>
+              <p className="text-gray-600">Reading together</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Calendar className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900">Monthly</h3>
+              <p className="text-gray-600">First Mondays</p>
+            </div>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Feature Cards */}
+        <section className="grid md:grid-cols-3 gap-8 mb-16">
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <BookOpen className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Submit Books</h3>
+            <p className="text-gray-600 mb-4">
+              Suggest your favorite reads for the club to discover together.
+            </p>
+            <Button variant="outline" className="w-full">
+              Coming Soon
+            </Button>
+          </Card>
+
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <Users className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Meet Members</h3>
+            <p className="text-gray-600 mb-4">
+              Connect with fellow book lovers and discover reading recommendations.
+            </p>
+            <Button variant="outline" className="w-full">
+              Coming Soon
+            </Button>
+          </Card>
+
+          <Card className="text-center hover:shadow-lg transition-shadow">
+            <Calendar className="w-12 h-12 text-purple-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Track Meetings</h3>
+            <p className="text-gray-600 mb-4">
+              Never miss a meeting with our interactive calendar and RSVP system.
+            </p>
+            <Button variant="outline" className="w-full">
+              Coming Soon
+            </Button>
+          </Card>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center">
+          <Card className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Ready to join the conversation?
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Sign in to access member features, submit books, and connect with your reading community.
+            </p>
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
+              Sign In to Get Started
+            </Button>
+          </Card>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
-  );
+  )
 }
