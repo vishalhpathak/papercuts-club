@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Papercuts Book Club Website
 
-## Getting Started
+A modern, community-driven website for the Papercuts book club - 18 members strong and reading together since 2023.
 
-First, run the development server:
+## 🎯 Project Vision
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Transform our book club from Google Sheets and manual coordination into a beautiful, engaging web platform that enhances our reading community experience.
+
+## ✅ What We've Built So Far
+
+### Core Infrastructure
+- **Next.js 15** with TypeScript and Tailwind CSS
+- **Organized project structure** with proper component separation
+- **Responsive design** with beautiful gradients and book-themed styling
+- **Clean component architecture** (UI components, layouts, pages)
+
+### Current Features
+- **Beautiful Homepage** with gradient design and club stats
+- **Header/Footer Layout** with Papercuts branding
+- **Responsive Design** that works on all devices
+- **Component Library** (Button, Card, Header, Footer)
+
+### Database Design (Ready to Implement)
+- **Supabase Backend** with PostgreSQL
+- **Complete Schema** for all planned features:
+  - User profiles with Goodreads integration
+  - Book submissions and ratings
+  - Meeting management with RSVP
+  - Discussion threads
+  - Photo galleries
+  - Reading progress tracking
+
+## 🚀 Planned Features
+
+### Phase 1: Core Functionality
+- [ ] **Authentication System**
+  - Google OAuth sign-in
+  - Member profiles with bio and reading preferences
+  - Goodreads profile linking
+
+- [ ] **Book Management**
+  - Annual book submission system (randomized selection)
+  - Book details with cover images
+  - Member ratings and mini-reviews
+  - Reading progress tracking
+
+### Phase 2: Community Features
+- [ ] **Meeting Management**
+  - Interactive calendar (first Monday of each month)
+  - Host selection and location updates
+  - RSVP system with status tracking
+  - Meeting photo galleries
+
+- [ ] **Discussion Platform**
+  - Book-specific discussion threads
+  - Member-only conversations
+  - Spoiler-safe discussions
+
+### Phase 3: Enhanced Experience
+- [ ] **Member Directory**
+  - Searchable member profiles
+  - Reading history and preferences
+  - Member book recommendations
+
+- [ ] **Goodreads Integration**
+  - Import member reading lists
+  - Sync reading progress
+  - Display member reviews
+  - Suggest future book picks based on member preferences
+
+### Phase 4: Advanced Features
+- [ ] **Reading Challenges**
+  - Annual page goals
+  - Genre diversity tracking
+  - Club reading streaks
+
+- [ ] **Enhanced Social Features**
+  - Quote of the month submissions
+  - Virtual bookshelf tours
+  - Member spotlights
+  - Reading anniversary celebrations
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 15, React, TypeScript
+- **Styling**: Tailwind CSS with custom gradients
+- **Backend**: Supabase (PostgreSQL + Auth + Real-time)
+- **Icons**: Lucide React
+- **Hosting**: Vercel (planned)
+- **Domain**: papercuts.org
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                     # Next.js App Router pages
+├── components/
+│   ├── ui/                  # Reusable UI components (Button, Card)
+│   ├── layout/              # Layout components (Header, Footer)
+│   ├── books/               # Book-specific components
+│   ├── meetings/            # Meeting management components
+│   └── members/             # Member-related components
+├── lib/                     # Utilities and configurations
+├── hooks/                   # Custom React hooks
+└── types/                   # TypeScript definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design Philosophy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Book-themed aesthetics** with warm orange/red gradients
+- **Community-first approach** - features that bring members together
+- **Mobile-responsive** for on-the-go book club management
+- **Clean, modern UI** that feels welcoming and literary
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📋 Current Status
 
-## Learn More
+**✅ Completed:**
+- Project scaffolding and architecture
+- Beautiful homepage design
+- Component library foundation
+- Database schema design
 
-To learn more about Next.js, take a look at the following resources:
+**🔄 In Progress:**
+- Deployment setup (GitHub → Vercel → papercuts.org)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**📝 Next Steps:**
+1. Complete deployment pipeline
+2. Set up Supabase database
+3. Implement authentication system
+4. Build book submission feature
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 How It Replaces Current Workflow
 
-## Deploy on Vercel
+**Before:**
+- Google Sheets for book submissions
+- Manual calendar invite updates
+- Email coordination for meetings
+- No central place for discussions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**After:**
+- Integrated book submission with voting
+- Automated meeting management
+- Rich discussion platform
+- Member profiles and reading tracking
+- Photo galleries and community features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌟 Why This Matters
+
+This isn't just a website - it's about strengthening our book club community. By creating a dedicated space for Papercuts, we're:
+- Making it easier to participate and stay engaged
+- Creating a lasting archive of our reading journey
+- Building deeper connections between members
+- Enhancing the joy of reading together
+
+---
+
+*Building community one page at a time* 📚
