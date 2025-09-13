@@ -1,4 +1,3 @@
-@"
 // src/lib/supabase.ts
 import { createBrowserClient } from '@supabase/ssr'
 
@@ -46,4 +45,3 @@ export interface Meeting {
   book?: Book
   host?: Profile
 }
-"@ | Out-File -FilePath "src/lib/supabase.ts" -Encoding UTF8
